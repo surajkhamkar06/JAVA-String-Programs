@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ReverseWords {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Ask user for input
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+
+        // Split and reverse each word
+        String[] words = sentence.split(" ");
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+            result.append(new StringBuilder(word).reverse()).append(" ");
+        }
+
+        // Print the result
+        System.out.println("Reversed sentence: " + result.toString().trim());
+
+        scanner.close();
+    }
+}
